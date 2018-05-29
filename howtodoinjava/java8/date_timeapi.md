@@ -27,3 +27,19 @@ Instant ins1 = instant.plus(Duration.ofMillis(5000));
 Instant ins2 = instant.minus(Duration.ofMillis(5000));
 Instant ins3 = instant.minusSecond(10);
 ```
+
+* `Duration` 表示两个时间点之间的间隔
+
+```
+Duration duration = Duration.ofMillis(5000);
+duration = Duration.ofSeconds(60);
+duration = Duration.ofMinutes(10);
+```
+
+* `Duration` 一般表示小的时间间隔（milliseconds, seconds, minutes, hours），大的间隔用 `Period` 类
+
+```
+Period period = Period.ofDays(6);
+period = Period.ofMonths(6);
+period = Period.between(LocalDate.now(), LocalDate.now().plusDays(60));
+```
